@@ -239,22 +239,22 @@ def main(img, img_id, out_dir, ext):
     out_img = remap_output(phi, theta, out_img_path, img, out_dir)
     out_img = cv2.flip(out_img, 1)
     cv2.imwrite(os.path.join(out_dir, out_img_path), out_img)
-    #back flont
-    #front back
-    #right left
-    #left right
 
-"""
+    #bottomとtopが逆ですが、実行に影響はありません。
     x1, y1, z1, = bottom_map()
     phi, theta = phi_theta(x1,y1,z1)
     out_img_path = "" + img_id + "_top_img" + ext
-    remap_output(phi, theta, out_img_path, img, out_dir)
+    out_img = remap_output(phi, theta, out_img_path, img, out_dir)
+    out_img = cv2.flip(out_img, 1)
+    cv2.imwrite(os.path.join(out_dir, out_img_path), out_img)
 
     x1, y1, z1, = top_map()
     phi, theta = phi_theta(x1,y1,z1)
     out_img_path = "" + img_id + "_bottom_img" + ext
-    remap_output(phi, theta, out_img_path, img, out_dir)
-"""
+    out_img = remap_output(phi, theta, out_img_path, img, out_dir)
+    out_img = cv2.flip(out_img, 1)
+    cv2.imwrite(os.path.join(out_dir, out_img_path), out_img)
+
 
 if __name__ == "__main__":
 
