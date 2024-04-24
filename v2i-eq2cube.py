@@ -7,8 +7,7 @@ import datetime
 import tqdm
 
 
-#精度が悪いのかどうか、imageへの変換のコード変更
-#lefがおかしい
+#bottom-imgとtop-imgが逆ですが、実行に影響はありません。
 
 #x = 0.5, y = width, z = height
 def back_map():
